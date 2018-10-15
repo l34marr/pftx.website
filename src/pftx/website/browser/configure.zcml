@@ -3,4 +3,10 @@
   xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="pftx.website">
 
+  <browser:page
+    name="suyuan_view"
+    for="pftx.website.interfaces.ISuYuan"
+    class=".view.SuYuanView"
+    permission="zope2.View" />
+
 </configure>
