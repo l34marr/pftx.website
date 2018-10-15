@@ -20,56 +20,121 @@
 <tal:block define="ys context/yarn|nothing"
  tal:condition="ys">
 <h3>YARN</h3>
-<p>
 <tal:loop repeat="y ys">
-<span tal:replace="python:view.mmbrname(y)">
-<span class="separator" tal:condition="not: repeat/y/end">,</span>
+<div class="panel panel-default">
+ <div class="panel-heading">
+  <a class="btn btn-default pat-toggle"
+   data-toggle="collapse"
+   tal:content="python:view.mmbrname(y)">Toggleable</a>
+ </div>
+ <div>
+  <ul class="collapse in">
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(y)['home_page'];
+                        target string:_blank">Report</a></li>
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(y)['location'];
+                        target string:_blank">Photo</a></li>
+  </ul>
+ </div>
+</div>
 </tal:loop>
-</p>
 </tal:block>
 
 <tal:block define="ks context/knit|nothing"
  tal:condition="ks">
 <h3>KNIT</h3>
-<p>
 <tal:loop repeat="k ks">
-<span tal:replace="python:view.mmbrname(k)">
-<span class="separator" tal:condition="not: repeat/k/end">,</span>
+<div class="panel panel-default">
+ <div class="panel-heading">
+  <a class="btn btn-default pat-toggle"
+   data-pat-toggle="value:in; target:.collapse; targetScopr:.panel"
+   tal:content="python:view.mmbrname(k)">Toggleable</a>
+ </div>
+ <div>
+  <ul class="collapse in">
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(k)['home_page'];
+                        target string:_blank">Report</a></li>
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(k)['location'];
+                        target string:_blank">Photo</a></li>
+  </ul>
+ </div>
+</div>
 </tal:loop>
-</p>
 </tal:block>
 
 <tal:block define="ds context/dye|nothing"
  tal:condition="ds">
 <h3>DYE</h3>
-<p>
 <tal:loop repeat="d ds">
-<span tal:replace="python:view.mmbrname(d)">
-<span class="separator" tal:condition="not: repeat/d/end">,</span>
+<div class="panel panel-default">
+ <div class="panel-heading">
+  <a class="btn btn-default pat-toggle"
+   data-pat-toggle="value:in; target:.collapse; targetScopr:.panel"
+   tal:content="python:view.mmbrname(d)">Toggleable</a>
+ </div>
+ <div>
+  <ul class="collapse in">
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(d)['home_page'];
+                        target string:_blank">Report</a></li>
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(d)['location'];
+                        target string:_blank">Photo</a></li>
+  </ul>
+ </div>
+</div>
 </tal:loop>
-</p>
 </tal:block>
 
 <tal:block define="os context/other|nothing"
  tal:condition="os">
 <h3>Other</h3>
-<p>
 <tal:loop repeat="o os">
-<span tal:replace="python:view.mmbrname(o)">
-<span class="separator" tal:condition="not: repeat/o/end">,</span>
+<div class="panel panel-default">
+ <div class="panel-heading">
+  <a class="btn btn-default pat-toggle"
+   data-pat-toggle="value:in; target:.collapse; targetScopr:.panel"
+   tal:content="python:view.mmbrname(o)">Toggleable</a>
+ </div>
+ <div>
+  <ul class="collapse in">
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(o)['home_page'];
+                        target string:_blank">Report</a></li>
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(o)['location'];
+                        target string:_blank">Photo</a></li>
+  </ul>
+ </div>
+</div>
 </tal:loop>
-</p>
 </tal:block>
 
 <tal:block define="gs context/garment|nothing"
  tal:condition="gs">
 <h3>GARMENT</h3>
-<p>
 <tal:loop repeat="g gs">
-<span tal:replace="python:view.mmbrname(g)">
-<span class="separator" tal:condition="not: repeat/g/end">,</span>
+<div class="panel panel-default">
+ <div class="panel-heading">
+  <a class="btn btn-default pat-toggle"
+   data-pat-toggle="value:in; target:.collapse; targetScopr:.panel"
+   tal:content="python:view.mmbrname(g)">Toggleable</a>
+ </div>
+ <div>
+  <ul class="collapse in">
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(g)['home_page'];
+                        target string:_blank">Report</a></li>
+   <li><a href="#"
+        tal:attributes="href python:view.mmbr(g)['location'];
+                        target string:_blank">Photo</a></li>
+  </ul>
+ </div>
+</div>
 </tal:loop>
-</p>
 </tal:block>
 
 </metal:content-core>
