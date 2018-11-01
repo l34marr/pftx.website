@@ -24,36 +24,14 @@ class ISuYuan(model.Schema):
 #   pono = schema.TextLine(
 #       title=_(u'PO No'),
 #   )
-    yarn = schema.Tuple(
-        title=_(u'YARN'),
+    garment = schema.Tuple(
+        title=_(u'GARMENT'),
         value_type=schema.TextLine(),
         required=False,
         missing_value=(),
     )
     directives.widget(
-        'yarn',
-        AjaxSelectFieldWidget,
-        vocabulary='plone.app.vocabularies.Users'
-    )
-    knit = schema.Tuple(
-        title=_(u'KNIT'),
-        value_type=schema.TextLine(),
-        required=False,
-        missing_value=(),
-    )
-    directives.widget(
-        'knit',
-        AjaxSelectFieldWidget,
-        vocabulary='plone.app.vocabularies.Users'
-    )
-    dye = schema.Tuple(
-        title=_(u'DYE'),
-        value_type=schema.TextLine(),
-        required=False,
-        missing_value=(),
-    )
-    directives.widget(
-        'dye',
+        'garment',
         AjaxSelectFieldWidget,
         vocabulary='plone.app.vocabularies.Users'
     )
@@ -68,14 +46,47 @@ class ISuYuan(model.Schema):
         AjaxSelectFieldWidget,
         vocabulary='plone.app.vocabularies.Users'
     )
-    garment = schema.Tuple(
-        title=_(u'GARMENT'),
+    yinhua = schema.Tuple(
+        title=_(u'PRINT'),
         value_type=schema.TextLine(),
         required=False,
         missing_value=(),
     )
     directives.widget(
-        'garment',
+        'yinhua',
+        AjaxSelectFieldWidget,
+        vocabulary='plone.app.vocabularies.Users'
+    )
+    dye = schema.Tuple(
+        title=_(u'DYE'),
+        value_type=schema.TextLine(),
+        required=False,
+        missing_value=(),
+    )
+    directives.widget(
+        'dye',
+        AjaxSelectFieldWidget,
+        vocabulary='plone.app.vocabularies.Users'
+    )
+    knit = schema.Tuple(
+        title=_(u'KNIT'),
+        value_type=schema.TextLine(),
+        required=False,
+        missing_value=(),
+    )
+    directives.widget(
+        'knit',
+        AjaxSelectFieldWidget,
+        vocabulary='plone.app.vocabularies.Users'
+    )
+    yarn = schema.Tuple(
+        title=_(u'YARN'),
+        value_type=schema.TextLine(),
+        required=False,
+        missing_value=(),
+    )
+    directives.widget(
+        'yarn',
         AjaxSelectFieldWidget,
         vocabulary='plone.app.vocabularies.Users'
     )
