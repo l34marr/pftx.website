@@ -32,3 +32,7 @@ class SuYuanView(BrowserView):
         mmbr = self.mmbr(mid)
         return mmbr and mmbr['fullname'] or None
 
+    def hasValue(self, mid):
+        mmbr = self.mmbr(mid)
+        return True and (mmbr['home_page'] or mmbr['report'] or mmbr['panorama']) or False
+
