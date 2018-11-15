@@ -2,7 +2,10 @@
 """Module where all interfaces, events and exceptions live."""
 from plone.autoform import directives
 from plone.supermodel import model
+from z3c.relationfield.schema import RelationChoice, RelationList
 from plone.app.z3cform.widget import AjaxSelectFieldWidget
+from plone.app.z3cform.widget import RelatedItemsFieldWidget
+from plone.app.vocabularies.catalog import CatalogSource
 from zope import schema
 from pftx.website import _
 
@@ -79,15 +82,21 @@ class ISuYuan(model.Schema):
         AjaxSelectFieldWidget,
         vocabulary='plone.app.vocabularies.Users'
     )
-    yarn = schema.Tuple(
-        title=_(u'YARN'),
-        value_type=schema.TextLine(),
+    yarn = RelationList(
+        title=_(u'SOURCE'),
+        default=[],
+        value_type=RelationChoice(
+            title=u'SRC',
+            source=CatalogSource(Type=['Folder', 'Link'])
+        ),
         required=False,
-        missing_value=(),
     )
     directives.widget(
         'yarn',
-        AjaxSelectFieldWidget,
-        vocabulary='plone.app.vocabularies.Users'
+        RelatedItemsFieldWidget,
+        vocabulary='plone.app.vocabularies.Catalog',
+        pattern_options={
+            'recentlyUsed': True,
+        }
     )
 

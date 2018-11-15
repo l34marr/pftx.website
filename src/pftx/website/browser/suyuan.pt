@@ -239,34 +239,23 @@ jQuery(function($) {
 <div class="col-sm-4" style="background-color: #fa9999; min-height: 180px"
  tal:define="ys context/yarn|nothing"
  tal:condition="ys">
-<h3>YARN</h3>
+<h3>SOURCE</h3>
 <tal:loop repeat="y ys">
 <div class="panel panel-default">
- <div
-  tal:condition="python:not view.hasValue(y)"
-  tal:content="python:view.mmbrname(y)">
-   FullName
- </div>
- <div id="panel-y"
-  tal:condition="python: view.hasValue(y)">
+ <div id="panel-y">
  <a
-  tal:content="python:view.mmbrname(y)">
+  tal:content="python:y.to_object.Title()">
    FullName</a>
  </div>
  <div id="more-y" style="display: none">
   <ul>
    <li style="display: inline-block; padding-left: 30px"><a href="#"
-    tal:condition="python:view.mmbr(y)['home_page']"
-    tal:attributes="href python:view.mmbr(y)['home_page'];
-                    target string:_blank">HomePage</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
-    tal:condition="python:view.mmbr(y)['report']"
-    tal:attributes="href python:view.mmbr(y)['report'];
-                    target string:_blank">Report</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
-    tal:condition="python:view.mmbr(y)['panorama']"
-    tal:attributes="href python:view.mmbr(y)['panorama'];
-                    target string:_blank">Photo</a></li>
+    tal:condition="python:y.to_object.remoteUrl"
+    tal:attributes="href python:y.to_object.remoteUrl;
+                    target string:_blank">Wikipedia</a></li>
+   <li style="display: inline-block; padding-left: 30px">
+    <span tal:condition="python:y.to_object.Description()">
+     Origin: <span tal:replace="python:y.to_object.Description()" /></span></li>
   </ul>
  </div>
 </div>
