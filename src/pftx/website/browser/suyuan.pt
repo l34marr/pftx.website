@@ -42,6 +42,7 @@ jQuery(function($) {
 <metal:content-core fill-slot="content-core">
 <metal:content-core define-macro="content-core">
 
+<span style="float: right"><a href="#" tal:attributes="href python:context.absolute_url_path()+ '/@@qrcode_view'">View QR Code</a></span>
 <h2 id="myid" tal:content="context/Title">Title</h2>
 
 <div class="row">

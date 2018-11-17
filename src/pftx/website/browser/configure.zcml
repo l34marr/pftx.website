@@ -9,4 +9,10 @@
     class=".view.SuYuanView"
     permission="zope2.View" />
 
+  <browser:page
+    name="qrcode_view"
+    for="pftx.website.interfaces.ISuYuan"
+    class=".view.QRCodeView"
+    permission="zope2.View" />
+
 </configure>
