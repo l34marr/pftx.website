@@ -258,7 +258,7 @@ jQuery(function($) {
    <li style="display: inline-block; padding-left: 30px"><a href="#"
     tal:condition="python:y.to_object.remoteUrl"
     tal:attributes="href python:y.to_object.remoteUrl;
-                    target string:_blank">Wikipedia</a></li>
+                    target string:_blank">Info</a></li>
    <li style="display: inline-block; padding-left: 30px">
     <span tal:condition="python:y.to_object.Description()">
      Origin: <span tal:replace="python:y.to_object.Description()" /></span></li>
