@@ -50,219 +50,217 @@ jQuery(function($) {
    tal:attributes="href url">View QR Code</a></span>
 <h2 id="myid" tal:content="context/Title">Title</h2>
 
-<div class="row">
+<div class="row items">
 
-<div class="col-sm-4" style="background-color: #66fcfc; min-height: 180px">
-<tal:block define="gs context/garment|nothing"
+<div class="col-sm-4 item" style="background-image: url(/pftx/++theme++pftx/images/icon_01.png)"
+ tal:define="gs context/garment|nothing"
  tal:condition="gs">
-<h3>GARMENT</h3>
+<div class="item_title">GARMENT</div>
 <tal:loop repeat="g gs">
-<div class="panel panel-default">
+<div class="panel panel-default item_subtitle">
  <div
   tal:condition="python:not view.hasValue(g)"
-  tal:content="python:view.mmbrname(g)">
+  tal:replace="python:view.mmbrname(g)">
    FullName
  </div>
- <div id="panel-g"
+ <div id="panel-g" class="item_subtitle"
   tal:condition="python: view.hasValue(g)">
  <a
   tal:content="python:view.mmbrname(g)">
    FullName</a>
  </div>
- <div id="more-g" style="display: none">
-  <ul>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+ <div id="more-g" class="item_icons">
+   <a href="#"
     tal:condition="python:view.mmbr(g)['home_page']"
     tal:attributes="href python:view.mmbr(g)['home_page'];
-                    target string:_blank">HomePage</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">HomePage</a>
+   <a href="#"
     tal:condition="python:view.mmbr(g)['report']"
     tal:attributes="href python:view.mmbr(g)['report'];
-                    target string:_blank">Report</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">Report</a>
+   <a href="#"
     tal:condition="python:view.mmbr(g)['panorama']"
     tal:attributes="href python:view.mmbr(g)['panorama'];
-                    target string:_blank">Photo</a></li>
-  </ul>
+                    target string:_blank;
+                    class string:btn">Photo</a>
  </div>
 </div>
 </tal:loop>
-</tal:block>
 </div>
 
-<div class="col-sm-4" style="background-color: #faebd7; min-height: 180px">
-<tal:block define="os context/other|nothing"
+<div class="col-sm-4 item" style="background-image: url(/pftx/++theme++pftx/images/icon_other.png)"
+ tal:define="os context/other|nothing"
  tal:condition="os">
-<h3>OTHER</h3>
+<div class="item_title">OTHER</div>
 <tal:loop repeat="o os">
-<div class="panel panel-default">
+<div class="panel panel-default item_subtitle">
  <div
   tal:condition="python:not view.hasValue(o)"
-  tal:content="python:view.mmbrname(o)">
+  tal:replace="python:view.mmbrname(o)">
    FullName
  </div>
- <div id="panel-o"
+ <div id="panel-o" class="item_subtitle"
   tal:condition="python: view.hasValue(o)">
  <a
   tal:content="python:view.mmbrname(o)">
    FullName</a>
  </div>
- <div id="more-o" style="display: none">
-  <ul>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+ <div id="more-o" class="item_icons">
+   <a href="#"
     tal:condition="python:view.mmbr(o)['home_page']"
     tal:attributes="href python:view.mmbr(o)['home_page'];
-                    target string:_blank">HomePage</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">HomePage</a>
+   <a href="#"
     tal:condition="python:view.mmbr(o)['report']"
     tal:attributes="href python:view.mmbr(o)['report'];
-                    target string:_blank">Report</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">Report</a>
+   <a href="#"
     tal:condition="python:view.mmbr(o)['panorama']"
     tal:attributes="href python:view.mmbr(o)['panorama'];
-                    target string:_blank">Photo</a></li>
-  </ul>
+                    target string:_blank;
+                    class string:btn">Photo</a>
  </div>
 </div>
 </tal:loop>
-</tal:block>
 </div>
 
-<div class="col-sm-4" style="background-color: #fea544; min-height: 180px"
+<div class="col-sm-4 item" style="background-image: url(/pftx/++theme++pftx/images/icon_dye.png)"
  tal:define="ps context/print|nothing"
  tal:condition="ps">
-<h3>PRINT</h3>
+<div class="item_title">PRINT</div>
 <tal:loop repeat="p ps">
-<div class="panel panel-default">
+<div class="panel panel-default item_subtitle">
  <div
   tal:condition="python:not view.hasValue(p)"
-  tal:content="python:view.mmbrname(p)">
+  tal:replace="python:view.mmbrname(p)">
    FullName
  </div>
- <div id="panel-p"
+ <div id="panel-p" class="item_subtitle"
   tal:condition="python: view.hasValue(p)">
  <a
   tal:content="python:view.mmbrname(p)">
    FullName</a>
  </div>
- <div id="more-p" style="display: none">
-  <ul>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+ <div id="more-p" class="item_icons">
+   <a href="#"
     tal:condition="python:view.mmbr(p)['home_page']"
     tal:attributes="href python:view.mmbr(p)['home_page'];
-                    target string:_blank">HomePage</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">HomePage</a>
+   <a href="#"
     tal:condition="python:view.mmbr(p)['report']"
     tal:attributes="href python:view.mmbr(p)['report'];
-                    target string:_blank">Report</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">Report</a>
+   <a href="#"
+    tal:condition="python:view.mmbr(p)['panorama']"
     tal:attributes="href python:view.mmbr(p)['panorama'];
-                    target string:_blank">Photo</a></li>
-  </ul>
+                    target string:_blank;
+                    class string:btn">Photo</a>
  </div>
 </div>
 </tal:loop>
 </div>
 
-</div>
-
-<div class="row">
-
-<div class="col-sm-4" style="background-color: #e0eeee; min-height: 180px"
+<div class="col-sm-4 item" style="background-image: url(/pftx/++theme++pftx/images/icon_dye.png)"
  tal:define="ds context/dye|nothing"
  tal:condition="ds">
-<h3>DYE</h3>
+<div class="item_title">DYE</div>
 <tal:loop repeat="d ds">
-<div class="panel panel-default">
+<div class="panel panel-default item_subtitle">
  <div
   tal:condition="python:not view.hasValue(d)"
-  tal:content="python:view.mmbrname(d)">
+  tal:replace="python:view.mmbrname(d)">
    FullName
  </div>
- <div id="panel-d"
+ <div id="panel-d" class="item_subtitle"
   tal:condition="python: view.hasValue(d)">
  <a
   tal:content="python:view.mmbrname(d)">
    FullName</a>
  </div>
- <div id="more-d" style="display: none">
-  <ul>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+ <div id="more-d" class="item_icons">
+   <a href="#"
     tal:condition="python:view.mmbr(d)['home_page']"
     tal:attributes="href python:view.mmbr(d)['home_page'];
-                    target string:_blank">HomePage</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">HomePage</a>
+   <a href="#"
     tal:condition="python:view.mmbr(d)['report']"
     tal:attributes="href python:view.mmbr(d)['report'];
-                        target string:_blank">Report</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">Report</a>
+   <a href="#"
     tal:condition="python:view.mmbr(d)['panorama']"
     tal:attributes="href python:view.mmbr(d)['panorama'];
-                    target string:_blank">Photo</a></li>
-  </ul>
+                    target string:_blank;
+                    class string:btn">Photo</a>
  </div>
 </div>
 </tal:loop>
 </div>
 
-<div class="col-sm-4" style="background-color: #00fa9a; min-height: 180px"
+<div class="col-sm-4 item" style="background-image: url(/pftx/++theme++pftx/images/icon_knit.png)"
  tal:define="ks context/knit|nothing"
  tal:condition="ks">
-<h3>KNIT</h3>
+<div class="item_title">KNIT</div>
 <tal:loop repeat="k ks">
-<div class="panel panel-default">
+<div class="panel panel-default item_subtitle">
  <div
   tal:condition="python:not view.hasValue(k)"
-  tal:content="python:view.mmbrname(k)">
+  tal:replace="python:view.mmbrname(k)">
    FullName
  </div>
- <div id="panel-k"
+ <div id="panel-k" class="item_subtitle"
   tal:condition="python: view.hasValue(k)">
  <a
   tal:content="python:view.mmbrname(k)">
    FullName</a>
  </div>
- <div id="more-k" style="display: none">
-  <ul>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+ <div id="more-k" class="item_icons">
+   <a href="#"
     tal:condition="python:view.mmbr(k)['home_page']"
     tal:attributes="href python:view.mmbr(k)['home_page'];
-                    target string:_blank">HomePage</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">HomePage</a>
+   <a href="#"
     tal:condition="python:view.mmbr(k)['report']"
     tal:attributes="href python:view.mmbr(k)['report'];
-                        target string:_blank">Report</a></li>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+                    target string:_blank;
+                    class string:btn">Report</a>
+   <a href="#"
     tal:condition="python:view.mmbr(k)['panorama']"
     tal:attributes="href python:view.mmbr(k)['panorama'];
-                        target string:_blank">Photo</a></li>
-  </ul>
+                    target string:_blank;
+                    class string:btn">Photo</a>
  </div>
 </div>
 </tal:loop>
 </div>
 
-<div class="col-sm-4" style="background-color: #fa9999; min-height: 180px"
+<div class="col-sm-4 item" style="background-image: url(/pftx/++theme++pftx/images/icon_source.png)"
  tal:define="ys context/yarn|nothing"
  tal:condition="ys">
-<h3>SOURCE</h3>
+<div class="item_title">SOURCE</div>
 <tal:loop repeat="y ys">
-<div class="panel panel-default">
- <div id="panel-y">
+<div class="panel panel-default item_subtitle">
+ <div id="panel-y" class="item_subtitle">
  <a
   tal:content="python:y.to_object.Title()">
    FullName</a>
  </div>
- <div id="more-y" style="display: none">
-  <ul>
-   <li style="display: inline-block; padding-left: 30px"><a href="#"
+    <span tal:condition="python:y.to_object.Description()">
+     Origin: <span tal:replace="python:y.to_object.Description()" /></span>
+ <div id="more-y" class="item_icons">
+   <a href="#"
     tal:condition="python:y.to_object.remoteUrl"
     tal:attributes="href python:y.to_object.remoteUrl;
-                    target string:_blank">Info</a></li>
-   <li style="display: inline-block; padding-left: 30px">
-    <span tal:condition="python:y.to_object.Description()">
-     Origin: <span tal:replace="python:y.to_object.Description()" /></span></li>
-  </ul>
+                    target string:_blank;
+                    class string:btn">Info</a>
  </div>
 </div>
 </tal:loop>
