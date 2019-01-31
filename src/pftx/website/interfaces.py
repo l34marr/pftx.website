@@ -2,6 +2,8 @@
 """Module where all interfaces, events and exceptions live."""
 from plone.autoform import directives
 from plone.supermodel import model
+from plone.app.textfield import RichText as RichTextField
+from plone.app.z3cform.widget import RichTextFieldWidget
 from z3c.relationfield.schema import RelationChoice, RelationList
 from plone.app.z3cform.widget import AjaxSelectFieldWidget
 from plone.app.z3cform.widget import RelatedItemsFieldWidget
@@ -14,6 +16,20 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 class IPftxWebsiteLayer(IDefaultBrowserLayer):
     """Marker Interface that Defines a Browser Layer."""
+
+
+class ISource(model.Schema):
+    """Source Type"""
+    title = schema.TextLine(
+        title=_(u'Title'),
+    )
+    text = RichTextField(
+        title=_(u'Text'),
+        description=u'',
+        required=False,
+    )
+    directives.widget('text', RichTextFieldWidget)
+    model.primary('text')
 
 
 class ISuYuan(model.Schema):
@@ -87,7 +103,7 @@ class ISuYuan(model.Schema):
         default=[],
         value_type=RelationChoice(
             title=u'SRC',
-            source=CatalogSource(Type=['Folder', 'Link'])
+            source=CatalogSource(Type=['Folder', 'Page', 'Source'])
         ),
         required=False,
     )

@@ -256,10 +256,9 @@ jQuery(function($) {
     <span tal:condition="python:y.to_object.Description()">
      Origin: <span tal:replace="python:y.to_object.Description()" /></span>
  <div id="more-y" class="item_icons">
-   <a href="#"
-    tal:condition="python:y.to_object.remoteUrl"
-    tal:attributes="href python:y.to_object.remoteUrl;
-                    target string:_blank;
+   <a href="javascript:;"
+    tal:condition="python:y.to_object.text"
+    tal:attributes="id string:myinfo;
                     class string:btn">Info</a>
  </div>
 </div>
@@ -267,6 +266,23 @@ jQuery(function($) {
 </div>
 
 </div>
+
+<?python
+from plone import api
+portal = api.portal.get()
+#polyester = portal['SOURCE']['polyester']
+polyester = context.yarn.to_object.text
+html = polyester.text.raw.replace("\n", " ").replace('\r', ' ')
+?>
+
+
+<script>
+$("#myinfo").on('click', function() {
+debugger
+  $.fancybox.open("<tal:source replace='structure html'></tal:source>");
+});
+</script>
+
 
 </metal:content-core>
 </metal:content-core>

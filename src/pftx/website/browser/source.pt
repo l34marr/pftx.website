@@ -1,0 +1,23 @@
+<html lang="en"
+ xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ xmlns:tal="http://xml.zope.org/namespaces/tal"
+ xmlns:metal="http://xml.zope.org/namespaces/metal"
+ xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+ metal:use-macro="context/main_template/macros/master"
+ i18n:domain="pftx.website">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core">
+
+<h2 id="myid" tal:content="context/Title">Title</h2>
+<div id="parent-fieldname-text"
+ tal:condition="context/text"
+ tal:content="structure python:context.text.output_relative_to(view.context)" />
+
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>

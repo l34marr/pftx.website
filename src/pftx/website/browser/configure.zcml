@@ -10,6 +10,12 @@
     permission="zope2.View" />
 
   <browser:page
+    name="source_view"
+    for="pftx.website.interfaces.ISource"
+    class=".view.SourceView"
+    permission="zope2.View" />
+
+  <browser:page
     name="qrcode_view"
     for="pftx.website.interfaces.ISuYuan"
     class=".view.QRCodeView"

@@ -19,6 +19,14 @@ class MyView(BrowserView):
             return None
 
 
+class SourceView(BrowserView):
+
+    template = ViewPageTemplateFile("source.pt")
+
+    def __call__(self):
+        return self.template()
+
+
 class SuYuanView(BrowserView):
 
     template = ViewPageTemplateFile("suyuan.pt")
