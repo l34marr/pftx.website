@@ -1903,7 +1903,7 @@ msgstr "編輯寄信動作"
 #: plone.app.users/plone/app/users/browser/schema_layout.pt:19
 #: plone.app.users/plone/app/users/browser/schemaeditor.py:98
 msgid "Edit Member Form Fields"
-msgstr "編輯會員表單欄位"
+msgstr "編輯廠商表單欄位"
 
 #: plone.app.contentrules/plone/app/contentrules/actions/move.py:191
 msgid "Edit Move Action"
@@ -3583,7 +3583,7 @@ msgstr "我的資料夾"
 
 #: CMFPlone/PloneControlPanel.py:65
 msgid "My Preferences"
-msgstr "個人偏好"
+msgstr "偏好設定"
 
 #: plone.app.discussion/plone/app/discussion/interfaces.py:150
 #: plone/app/theming/interfaces.py:34
@@ -4047,7 +4047,7 @@ msgstr "權限不允許對 ${title} 改名。"
 #: CMFPlone/profiles/default/controlpanel.xml
 #: plone.app.users/plone/app/users/browser/account-configlet.pt:36
 msgid "Personal Preferences"
-msgstr "個人偏好"
+msgstr "偏好設定"
 
 msgid "Plain Text"
 msgstr "純文字檔案"
@@ -6296,7 +6296,7 @@ msgstr "留言者的帳號"
 
 #: CMFPlone/PloneControlPanel.py:70
 msgid "Users"
-msgstr "成員"
+msgstr "廠商名單"
 
 #. Default: "Users and Groups"
 #: CMFPlone/controlpanel/browser/controlpanel_usergroups_layout.pt:19
@@ -7468,7 +7468,7 @@ msgstr "左右兩邊的設定區，只顯示與現行群組相關的資訊方框
 #. Default: "This search form enables you to find users by specifying one or more search criteria."
 #: plone.app.users/plone/app/users/browser/membersearch.py:89
 msgid "description_member_search"
-msgstr "這個搜尋表單，可指定一個或多個條件，以找尋特定成員。"
+msgstr "這個搜尋表單，可指定一個或多個條件，以找尋特定廠商。"
 
 #. Default: "This form allows you to directly edit the XML representation of the field list. This makes it possible to add annotations for fieldsets, validation and widgets. See the <a href=\"http://docs.plone.org/external/plone.app.dexterity/docs/reference/dexterity-xml.html\">Dexterity XML</a> section of the <a href=\"http://docs.plone.org/external/plone.app.dexterity/docs/index.html\">Dexterity Developer Manual</a> for details."
 #: plone.app.dexterity/plone/app/dexterity/browser/modeleditor.pt:25
@@ -7478,7 +7478,7 @@ msgstr ""
 #. Default: "Your personal settings."
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:86
 msgid "description_my_preferences"
-msgstr "個人偏好設定。"
+msgstr "偏好設定。"
 
 #. Default: "If you do not have an account here, head over to the ${registration_form}."
 #: CMFPlone/skins/plone_login/failsafe_login_form.cpt:34
@@ -7561,7 +7561,7 @@ msgstr "編輯廠商資訊"
 #. Default: "Change personal information for $name"
 #: plone.app.users/plone/app/users/browser/userdatapanel.py:75
 msgid "description_personal_information_form_otheruser"
-msgstr "編輯 $name 的個人資訊"
+msgstr "編輯 $name 的資訊"
 
 #. Default: "If you wish to block or unblock certain categories of portlets, you can do so using the drop-down boxes. Portlets that are included by these categories are shown below the selection box."
 #: plone.app.portlets/plone/app/portlets/browser/templates/manage-contextual.pt:58
@@ -7571,7 +7571,7 @@ msgstr "是否沿用上層的資訊方框設定值，可由下拉選單來指定
 #. Default: "Personal settings for $name"
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:79
 msgid "description_preferences_form_otheruser"
-msgstr "$name 個人設定"
+msgstr "$name 偏好設定"
 
 #. Default: "You are running in \"production mode\". This is the preferred mode of operation for a live Plone site, but means that some configuration changes will not take effect until your server is restarted or a product refreshed. If this is a development instance, and you want to enable debug mode, stop the server, set 'debug-mode=on' in your buildout.cfg, re-run bin/buildout and then restart the server process."
 #: CMFPlone/controlpanel/browser/overview.pt:139
@@ -8160,7 +8160,7 @@ msgstr "密碼遺失"
 #. Default: "Search for users"
 #: plone.app.users/plone/app/users/browser/membersearch.py:88
 msgid "heading_member_search"
-msgstr "搜尋成員"
+msgstr "搜尋廠商"
 
 #. Default: "Member tools"
 #: plone.app.layout/plone/app/layout/viewlets/membertools.pt:7
@@ -8983,12 +8983,12 @@ msgstr "搜尋成員的電子信箱地址包含"
 #. Default: "Find users whose full names contain"
 #: plone.app.users/plone/app/users/browser/membersearch.py:37
 msgid "help_search_fullname"
-msgstr "搜尋成員的全名包含"
+msgstr "搜尋廠商的全名包含"
 
 #. Default: "Find users whose login name contain"
 #: plone.app.users/plone/app/users/browser/membersearch.py:23
 msgid "help_search_name"
-msgstr "搜尋成員的帳號名稱包含"
+msgstr "搜尋廠商的帳號名稱包含"
 
 #. Default: "Select what content type you wish to create."
 #: Archetypes/skins/archetypes/widgets/addable_support.pt:45
@@ -9124,7 +9124,7 @@ msgstr "勾選的話，啟用的佈景主題就會生效。"
 #. Default: "Your time zone"
 #: plone.app.users/plone/app/users/browser/personalpreferences.py:50
 msgid "help_timezone"
-msgstr "你的時區"
+msgstr "選用想要的時區。"
 
 #. Default: "Enter what items you would like in the menu bar."
 #: CMFPlone/interfaces/controlpanel.py:645
@@ -10339,6 +10339,10 @@ msgstr "分頁顯示數量"
 msgid "label_panorama"
 msgstr "環景網址"
 
+#.Default: "Info"
+msgid "label_info"
+msgstr "資訊"
+
 #. Default: "Location"
 #: Archetypes/ExtensibleMetadata.py:102
 #: plone.app.users/plone/app/users/profiles/default/userschema.xml
@@ -11353,7 +11357,7 @@ msgstr "沒有任何例外事件記錄。"
 #. Default: "User Search Criteria"
 #: plone.app.users/plone/app/users/browser/membersearch.py:16
 msgid "legend_member_search_criteria"
-msgstr "成員搜尋條件"
+msgstr "廠商搜尋條件"
 
 #. Default: "New Password"
 #: CMFPlone/browser/templates/pwreset_form.pt:30
@@ -11502,7 +11506,7 @@ msgstr "標題"
 #: CMFPlone/controlpanel/browser/usergroups_groupmembership.pt:106
 #: CMFPlone/controlpanel/browser/usergroups_usersoverview.pt:110
 msgid "listingheader_user_name"
-msgstr "使用者名稱"
+msgstr "廠商名稱"
 
 #. Default: "Since cookie authentication is disabled, cookie-based login is not available."
 #: CMFPlone/skins/plone_login/external_login_return.cpt:38
